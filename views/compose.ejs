@@ -1,0 +1,20 @@
+<!-- inserts another ejs file in same "views directory" -->
+<% include partials/header %>
+
+<div>
+  <h1 class="composeTitle">Compose</h1>
+
+  <form action="/compose" method="post">
+    <div class="form-group">
+      <label class="form-label" for="title">Title</label>
+      <input class="form-control" type="text" name="postTitle" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="blogPost">Post</label>
+      <textarea class="form-control" rows="6" name="postBlog"></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+<% include partials/footer %>

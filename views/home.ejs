@@ -1,0 +1,22 @@
+<!-- inserts another ejs file in same "views directory" -->
+<% include partials/header %>
+
+<div class="blog">
+  <h1>Home</h1>
+  <p>
+    <!-- renders the value of object-key given by res.render in app.js -->
+    <%= home %>
+  </p>
+
+  <% blogArray.forEach(function(post) {
+    const heading = post.title
+    const content = post.blog
+   %>
+  <h1> <%= heading %> </h1>
+  <p>
+     <%= content.substring(0, 100) + " ..." %> <a href="/posts/<%=post.title%>">Read More</a> 
+  </p>
+  <% }) %>
+</div>
+
+<% include partials/footer %>

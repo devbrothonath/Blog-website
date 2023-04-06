@@ -1,0 +1,12 @@
+<!-- inserts another ejs file in same "views directory" -->
+<% include partials/header %>
+
+<div class="blog">
+  <h1>Contact</h1>
+  <p>
+    <!-- renders the value of object-key given by res.render in app.js -->
+    <%= contact %>
+  </p>
+</div>
+
+<% include partials/footer %>
